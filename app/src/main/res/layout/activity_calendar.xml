@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CalendarActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="336dp"
+
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/diaryTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:fontFamily="@font/gothic_a1_semibold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    <EditText
+        android:id="@+id/contextEditText"
+        android:layout_width="0dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/gothic_a1_semibold"
+        android:ems="10"
+        android:hint="내용을 입력하세요."
+        android:inputType="textMultiLine"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/gothic_a1_semibold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/contextEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/contextEditText"
+        app:layout_constraintTop_toTopOf="@+id/contextEditText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="달력"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#9E28B3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/save_Btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#0C0C0C"
+        android:text="저장"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/gothic_a1_semibold"
+        app:cornerRadius="15dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contextEditText" />
+
+
+    <Button
+        android:id="@+id/cha_Btn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0C0C0C"
+        android:text="수정"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        android:fontFamily="@font/gothic_a1_semibold"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/save_Btn"
+        app:layout_constraintEnd_toStartOf="@+id/del_Btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/del_Btn"
+        android:backgroundTint="#0C0C0C"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="삭제"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/gothic_a1_semibold"
+        app:cornerRadius="15dp"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn"
+        app:layout_constraintEnd_toEndOf="@+id/save_Btn"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

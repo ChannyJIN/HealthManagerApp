@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">healthApp</string>
+    <string-array name="exercise_options">
+        <item>가슴 운동</item>
+        <item>등 운동</item>
+        <item>어깨 운동</item>
+        <item>이두 운동</item>
+        <item>삼두 운동</item>
+        <item>하체 운동</item>
+    </string-array>
+</resources>
